@@ -1,11 +1,11 @@
 import React from 'react';
 import './Article.scss';
 
-const Article = (fields) => (
+const Article = ({ article }) => (
   <section className='container article'>
-    <h2>{fields.article.title}</h2>
+    <h2>{article.title}</h2>
     <div>
-      <p>{fields.article.body}</p>
+      <p>{article.body}</p>
     </div>
   </section>
 );

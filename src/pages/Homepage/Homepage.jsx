@@ -6,16 +6,16 @@ import Portfolio from '../../components/Portfolio/PortfolioComponent';
 import Skills from '../../components/Skills/SkillsComponent';
 import Footer from '../../components/Footer/FooterComponent';
 
-const Homepage = (fields) => {
+const Homepage = ({ header, article, portfolio, skills, footer }) => {
   return (
     <div className='page-wrapper'>
-      <Header {...fields} />
+      <Header header={header} />
       <main role='main'>
-        <Article {...fields} />
-        <Portfolio {...fields} />
-        <Skills {...fields} />
+        <Article article={article} />
+        <Portfolio portfolio={portfolio} />
+        <Skills skills={skills} />
       </main>
-      <Footer {...fields} />
+      <Footer footer={footer} />
     </div>
   )
 };

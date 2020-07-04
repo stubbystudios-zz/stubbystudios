@@ -26,6 +26,11 @@ class App extends React.Component {
 
   render() {
     const fields = this.state.fields;
+    const header = fields.header;
+    const article = fields.article;
+    const portfolio = fields.portfolio;
+    const skills = fields.skills;
+    const footer = fields.footer;
 
     return (
       <>

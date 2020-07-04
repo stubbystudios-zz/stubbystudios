@@ -1,16 +1,16 @@
 import React from 'react';
 import './Portfolio.scss';
 
-const Portfolio = (fields) => (
+const Portfolio = ({ portfolio }) => (
   <section className='container portfolio'>
-    <h2 className='section-title'>{fields.portfolio_title}</h2>
+    <h2 className='section-title'>{portfolio.portfolio_title}</h2>
     <ul>
-      {fields.portfolio.map((port, index) => {
+      {portfolio.map((screenshot, index) => {
         return (
           <li className='screenshot' key={index}>
-            <img src={port.thumbnail} alt={port.thumbnail_alt} />
-            <h3>{port.title}</h3>
-            <p>{port.text}</p>
+            <img src={screenshot.thumbnail} alt={screenshot.thumbnail_alt} />
+            <h3>{screenshot.title}</h3>
+            <p>{screenshot.text}</p>
           </li>
         )
       })}
