@@ -5,6 +5,8 @@
 
 body {
   font-family: 'Raleway', Helvetica, Arial, sans-serif;
+
+  @include font-size(16px);
 }
 
 h1,
@@ -48,7 +50,7 @@ a:visited {
   &:hover,
   &:active,
   &:focus {
-    color: $stubby-purple-20;
+    color: $stubby-white-20;
   }
 }
 

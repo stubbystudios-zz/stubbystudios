@@ -4,6 +4,7 @@ import Header from '../../components/Header/HeaderComponent';
 import Article from '../../components/Article/ArticleComponent';
 import Portfolio from '../../components/Portfolio/PortfolioComponent';
 import Skills from '../../components/Skills/SkillsComponent';
+import Footer from '../../components/Footer/FooterComponent';
 
 const Homepage = (fields) => {
   return (
@@ -14,12 +15,7 @@ const Homepage = (fields) => {
         <Portfolio {...fields} />
         <Skills {...fields} />
       </main>
-      <footer role='contentinfo'>
-        <div className='container page-footer'>
-          <p>Powered <a href="https://buttercms.com/">ButterCMS</a> and React</p>
-          <img src={fields.footer.logo} alt={fields.footer.alt} />
-        </div>
-      </footer>
+      <Footer {...fields} />
     </div>
   )
 };
