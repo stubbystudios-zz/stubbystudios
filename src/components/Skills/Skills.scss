@@ -1,0 +1,41 @@
+@import '../../index.scss';
+
+.skills {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  li {
+    margin-bottom: 48px;
+    text-align: center;
+    width: 30%;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    height: 90px;
+  }
+
+  h4 {
+    margin-bottom: 16px;;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .skills {
+    ul {
+      justify-content: space-between;
+    }
+
+    li {
+      width: 24%;
+
+      img {
+        height: 110px;
+      }
+    }
+  }
+}

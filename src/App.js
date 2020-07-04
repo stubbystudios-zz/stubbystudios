@@ -1,26 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import butter from './butter-client.js'
+import { Helmet } from 'react-helmet'
+import Homepage from './pages/Homepage/Homepage';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      fields: {
+        header: '',
+        article: '',
+        portfolio: [],
+        skills: [],
+        footer: []
+      }
+    }
+  }
+
+  async componentDidMount() {
+    const { match } = this.props;
+    const resp = await butter.page.retrieve('*', 'homepage');
+    this.setState({ fields: resp.data.data.fields });
+  }
+
+  render() {
+    const fields = this.state.fields;
+
+    return (
+      <>
+        <Helmet>
+          <title>{fields.header.seo_title}</title>
+        </Helmet>
+        <Homepage {...fields} />
+      </>
+    );
+  }
 }
 
 export default App;

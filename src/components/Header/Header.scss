@@ -1,0 +1,39 @@
+@import '../../index.scss';
+
+.header-main {
+  align-items: center;
+  background-color: $stubby-white-20;
+  background-position: -20px bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 20px solid $stubby-purple-30;
+  box-shadow: 0 1px 3px $stubby-purple-10;
+  color: $stubby-white-10;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 48px;
+  padding: 24px 0 160px;
+  text-align: center;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.35);
+
+  h1 {
+    @include font-size(36px);
+  }
+
+  img {
+    max-width: 75px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-main {
+    background-position: center bottom;
+    background-size: cover;
+    height: 475px;
+    padding: 48px 0;
+
+    h1 {
+      @include font-size(48px);
+    }
+  }
+}

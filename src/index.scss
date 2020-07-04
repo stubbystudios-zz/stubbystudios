@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Fauna+One&family=Raleway:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap');
+@import 'styles/reset';
+@import 'styles/variables';
+@import 'styles/mixins';
+
+body {
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Fauna One', Helvetica, Arial, sans-serif;
+}
+
+h1 { 
+  @include font-size(48px);
+}
+
+h2 { 
+  @include font-size(36px);
+}
+
+h3 { 
+  @include font-size(24px);
+}
+
+h4 { 
+  @include font-size(18px);
+}
+
+h5 { 
+  @include font-size(16px);
+}
+
+h6 { 
+  font-weight: 700;
+
+  @include font-size(14px);
+}
+
+a,
+a:visited {
+  color: $stubby-blue;
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $stubby-purple-20;
+  }
+}
+
+img {
+  max-width: 100%;
+}
