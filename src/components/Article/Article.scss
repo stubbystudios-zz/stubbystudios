@@ -4,4 +4,62 @@
   h2 {
     margin-bottom: 16px;
   }
+
+  .btn-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .btn {
+    background: $stubby-white-10;
+    box-shadow: 0 0 1px 1px $stubby-white-10;
+    border: 2px solid $stubby-white-10;
+    border-radius: 2px;
+    display: inline-block;
+    font-weight: bold;
+    margin: 24px 0;
+    padding: 8px 12px;
+
+    @include font-size(14px);
+  }
+
+  .linkedin-btn {
+    border: 2px solid $linkedin-blue;
+    color: $linkedin-blue; 
+
+    &:hover {
+      background: $linkedin-blue;
+      box-shadow: 0 0 1px 1px $linkedin-blue;
+      color: $stubby-white-10; 
+    }
+  }
+
+  .indeed-btn {
+    border: 2px solid $indeed-blue;
+    color: $indeed-blue; 
+
+    &:hover {
+      background: $indeed-blue;
+      box-shadow: 0 0 1px 1px $indeed-blue;
+      color: $stubby-white-10; 
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .article {
+    .btn {
+      padding: 12px 24px;
+
+      @include font-size(16px);
+    }
+
+    .btn-container {
+      justify-content: flex-start;
+    }
+
+    .linkedin-btn {
+      margin-right: 16px;
+    }
+  }
 }

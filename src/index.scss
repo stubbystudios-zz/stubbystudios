@@ -17,15 +17,15 @@ h4 {
 }
 
 h1 { 
-  @include font-size(48px);
+  @include font-size(44px);
 }
 
 h2 { 
-  @include font-size(36px);
+  @include font-size(32px);
 }
 
 h3 { 
-  @include font-size(24px);
+  @include font-size(22px);
 }
 
 h4 { 
@@ -56,4 +56,18 @@ a:visited {
 
 img {
   max-width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  h1 { 
+    @include font-size(48px);
+  }
+
+  h2 { 
+    @include font-size(36px);
+  }
+
+  h3 { 
+    @include font-size(24px);
+  }
 }

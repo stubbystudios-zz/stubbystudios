@@ -19,18 +19,12 @@ class App extends React.Component {
   }
 
   async componentDidMount() {
-    const { match } = this.props;
     const resp = await butter.page.retrieve('*', 'homepage');
     this.setState({ fields: resp.data.data.fields });
   }
 
   render() {
     const fields = this.state.fields;
-    const header = fields.header;
-    const article = fields.article;
-    const portfolio = fields.portfolio;
-    const skills = fields.skills;
-    const footer = fields.footer;
 
     return (
       <>

@@ -2,7 +2,6 @@ import React from 'react';
 import './Header.scss';
 
 const Header = ({ header }) => {
-  console.log('THE DATA', `${header.headline}`);
   return (
     <header role='banner' className='header-main'
       style={{
