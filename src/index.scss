@@ -1,42 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Fauna+One&family=Raleway:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap');
-@import 'styles/reset';
-@import 'styles/variables';
-@import 'styles/mixins';
+@import url("https://fonts.googleapis.com/css2?family=Fauna+One&family=Raleway:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap");
+@import "styles/reset";
+@import "styles/variables";
+@import "styles/mixins";
+@import "styles/buttons";
 
 body {
-  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  background: $stubby-purple-20;
+  color: $stubby-white-10;
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
 
   @include font-size(16px);
+}
+
+.container {
+  margin: 24px auto;
+  max-width: 700px;
+  padding: 0 24px;
+
+  .section-title {
+    margin: 48px 0 16px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
+
+    @include font-size(18px);
+  }
+}
+
+main {
+  color: $stubby-white-10;
+  width: 100vw;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: 'Fauna One', Helvetica, Arial, sans-serif;
+  font-family: "Fauna One", Helvetica, Arial, sans-serif;
 }
 
-h1 { 
+h1 {
   @include font-size(44px);
 }
 
-h2 { 
+h2 {
   @include font-size(32px);
 }
 
-h3 { 
+h3 {
   @include font-size(22px);
 }
 
-h4 { 
+h4 {
   @include font-size(18px);
 }
 
-h5 { 
+h5 {
   @include font-size(16px);
 }
 
-h6 { 
+h6 {
   font-weight: 700;
 
   @include font-size(14px);
@@ -59,15 +81,15 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-  h1 { 
+  h1 {
     @include font-size(48px);
   }
 
-  h2 { 
+  h2 {
     @include font-size(36px);
   }
 
-  h3 { 
+  h3 {
     @include font-size(24px);
   }
 }

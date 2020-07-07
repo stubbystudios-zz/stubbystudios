@@ -1,12 +1,16 @@
 import React from 'react';
-import './Homepage.scss';
 import Header from '../../components/Header/HeaderComponent';
 import Article from '../../components/Article/ArticleComponent';
 import Portfolio from '../../components/Portfolio/PortfolioComponent';
 import Skills from '../../components/Skills/SkillsComponent';
 import Footer from '../../components/Footer/FooterComponent';
 
-const Homepage = ({ header, article, portfolio, skills, footer }) => {
+const Homepage = ({
+  header,
+  article,
+  portfolio,
+  skills,
+  footer }) => {
   return (
     <div className='page-wrapper'>
       <Header header={header} />
