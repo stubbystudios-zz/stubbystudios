@@ -19,15 +19,6 @@ class ContactPage extends React.Component {
     this.setState({ fields: resp.data.data.fields });
   }
 
-  handleSubmit(event) {
-    event.preventDefault();
-    const data = new FormData(event.target);
-    fetch('butter', {
-      method: 'POST',
-      body: data,
-    });
-  }
-
   render() {
     const emailTest = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
     const fields = this.state.fields;
