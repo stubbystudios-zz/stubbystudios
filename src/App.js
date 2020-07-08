@@ -2,8 +2,6 @@ import React from 'react';
 import butter from './butter-client.js'
 import { Helmet } from 'react-helmet'
 import Homepage from './pages/Homepage/Homepage';
-import { Switch, Route } from 'react-router-dom';
-import ContactPage from './pages/Contact/ContactPage.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -33,12 +31,7 @@ class App extends React.Component {
         <Helmet>
           <title>{fields.header.seo_title}</title>
         </Helmet>
-        <Switch>
-          <Route exact path="/" render={() =>
-            (<Homepage {...fields} />)
-          } />
-          <Route path='/ContactPage' component={ContactPage} />
-        </Switch>
+        <Homepage {...fields} />
       </>
     );
   }
