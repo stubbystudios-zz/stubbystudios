@@ -7,7 +7,7 @@ const Header = ({ header }) => {
       style={{
         backgroundImage: `url(${header.hero_image})`
       }}>
-      <div className='container'>
+      <div className='container hero-content'>
         <img src={header.logo_image} alt={header.logo_alt} />
         <h1>{header.headline}</h1>
         <h4>{header.sub_headline}</h4>

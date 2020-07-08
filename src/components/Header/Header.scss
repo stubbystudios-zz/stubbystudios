@@ -1,4 +1,5 @@
-@import '../../index.scss';
+@import "../../index.scss";
+@import "animation";
 
 .header-main {
   align-items: center;
@@ -14,7 +15,7 @@
   margin-bottom: 48px;
   padding: 24px 0 160px;
   text-align: center;
-  text-shadow: 2px 2px 3px rgba(0,0,0,0.35);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.35);
 
   h1 {
     @include font-size(36px);
