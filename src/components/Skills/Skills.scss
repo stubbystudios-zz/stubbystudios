@@ -1,4 +1,4 @@
-@import '../../index.scss';
+@import "../../index.scss";
 
 .skills {
   ul {
@@ -8,7 +8,7 @@
   }
 
   li {
-    margin-bottom: 48px;
+    margin-bottom: calculateRem(48px);
     text-align: center;
     width: 30%;
   }
@@ -16,11 +16,11 @@
   img {
     display: block;
     margin: 0 auto;
-    height: 90px;
+    height: calculateRem(90px);
   }
 
   h4 {
-    margin-bottom: 16px;;
+    margin-bottom: 16px;
   }
 }
 
@@ -34,7 +34,7 @@
       width: 24%;
 
       img {
-        height: 110px;
+        height: calculateRem(110px);
       }
     }
   }

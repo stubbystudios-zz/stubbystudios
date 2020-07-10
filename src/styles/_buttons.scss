@@ -1,4 +1,4 @@
-@mixin button($btn-color-1: $stubby-white-10, $btn-color-2: $stubby-purple-10) {
+@mixin button($btn-color-1: $stubby-white, $btn-color-2: $stubby-purple-10) {
   background: $btn-color-1;
   box-shadow: 0 0 1px 1px $btn-color-1;
   border: 2px solid $btn-color-2;
@@ -7,8 +7,8 @@
   cursor: pointer;
   display: inline-block;
   font-weight: bold;
-  margin: 24px 0;
-  padding: 8px 12px;
+  margin: calculateRem(24px) 0;
+  padding: calculateRem(8px) calculateRem(12px);
 
   @include font-size(14px);
 
@@ -25,11 +25,11 @@
 }
 
 .indeed-btn {
-  @include button($stubby-white-10, $indeed-blue);
+  @include button($stubby-white, $indeed-blue);
 }
 
 .linkedin-btn {
-  @include button($stubby-white-10, $linkedin-blue);
+  @include button($stubby-white, $linkedin-blue);
 }
 
 .btn-container {
@@ -40,7 +40,7 @@
 @media screen and (min-width: 768px) {
   .article {
     .btn {
-      padding: 12px 24px;
+      padding: calculateRem(12px) calculateRem(24px);
 
       @include font-size(16px);
     }
@@ -50,7 +50,7 @@
     }
 
     .linkedin-btn {
-      margin-right: 16px;
+      margin-right: calculateRem(16px);
     }
   }
 }

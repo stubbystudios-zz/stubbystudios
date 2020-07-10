@@ -6,7 +6,7 @@
 
 body {
   background: $stubby-purple-20;
-  color: $stubby-white-10;
+  color: $stubby-white;
   font-family: "Raleway", Helvetica, Arial, sans-serif;
 
   @include font-size(16px);
@@ -18,7 +18,7 @@ body {
   padding: 0 24px;
 
   .section-title {
-    margin: 48px 0 16px;
+    margin: calculateRem(48px) 0 16px;
     text-transform: uppercase;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
 
@@ -27,7 +27,7 @@ body {
 }
 
 main {
-  color: $stubby-white-10;
+  color: $stubby-white;
   width: 100vw;
 }
 

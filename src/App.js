@@ -1,6 +1,6 @@
 import React from 'react';
-import butter from './butter-client.js'
-import { Helmet } from 'react-helmet'
+import butter from './butter-client.js';
+import { Helmet } from 'react-helmet';
 import Homepage from './pages/Homepage/Homepage';
 
 class App extends React.Component {

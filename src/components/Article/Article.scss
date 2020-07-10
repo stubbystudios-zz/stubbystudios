@@ -1,8 +1,7 @@
-@import '../../index.scss';
+@import "../../index.scss";
 
 .article {
   h2 {
-    margin-bottom: 16px;
+    margin-bottom: calculateRem(16px);
   }
 }
-

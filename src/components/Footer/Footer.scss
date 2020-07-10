@@ -1,9 +1,9 @@
-@import '../../index.scss';
+@import "../../index.scss";
 
 footer {
   background: $stubby-purple-30;
   border-top: 1px solid $stubby-purple-10;
-  color: $stubby-white-10;
+  color: $stubby-white;
   text-align: center;
 
   .page-footer {
@@ -19,7 +19,7 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
-  footer{
+  footer {
     .page-footer {
       align-items: center;
       display: flex;
