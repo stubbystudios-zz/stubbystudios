@@ -8,3 +8,9 @@
   font-size: calculateRem($size);
   line-height: 1.4;
 }
+
+@mixin icon($size, $cursor: pointer) {
+  cursor: $cursor;
+  height: $size;
+  width: $size;
+}

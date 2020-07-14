@@ -1,51 +1,55 @@
 @import "../../index.scss";
 
-.portfolio {
-  .screenshot {
-    margin: calculateRem(32px) auto;
+.modal-outer {
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
 
-    h3 {
-      margin-bottom: calculateRem(8px);
-    }
-
-    p {
-      margin-bottom: calculateRem(16px);
-    }
-
-    img {
-      border: 3px solid $stubby-white-20;
-      width: 100%;
-    }
-
-    &:first-child {
-      margin-top: 0;
-    }
+  .overlay {
+    background: rgba(0, 0, 0, 0.55);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 1010;
   }
 }
 
-.modal-content {
+.modal-inner {
+  background: $stubby-white;
+  border-radius: 2px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.9);
   color: $stubby-black-90;
+  font-family: "Fauna One", Helvetica, Arial, sans-serif;
+  margin: calculateRem(24px) auto 0;
+  max-width: calculateRem(1200px);
+  padding: calculateRem(16px);
+  position: relative;
+  width: 96%;
+  z-index: 1020;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
 
   h3 {
     margin-bottom: calculateRem(16px);
+
+    @include font-size(22px);
   }
-}
 
-@media screen and (min-width: 768px) {
-  .portfolio {
-    ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
+  img {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.55);
+    width: 100%;
+  }
 
-    .screenshot {
-      margin: calculateRem(16px) 0;
-      width: 48%;
+  .icon-close {
+    opacity: 0.5;
 
-      &:first-child {
-        margin-top: calculateRem(16px);
-      }
+    &:hover {
+      opacity: 1;
     }
   }
 }

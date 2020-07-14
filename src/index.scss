@@ -72,12 +72,16 @@ a:visited {
   &:hover,
   &:active,
   &:focus {
-    color: $stubby-white-20;
+    color: $stubby-white-10;
   }
 }
 
 img {
   max-width: 100%;
+}
+
+.icon {
+  @include icon(24px);
 }
 
 @media screen and (min-width: 768px) {

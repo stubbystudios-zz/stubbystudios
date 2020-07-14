@@ -1,0 +1,53 @@
+@import "../../index.scss";
+
+.portfolio {
+  .screenshot {
+    margin: calculateRem(32px) auto;
+
+    h3 {
+      margin-bottom: calculateRem(8px);
+    }
+
+    p {
+      margin-bottom: calculateRem(16px);
+    }
+
+    img {
+      border: 3px solid $stubby-white-10;
+      width: 100%;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.thumbnail-content {
+  img {
+    cursor: pointer;
+
+    &:hover {
+      border-color: $stubby-blue;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .screenshot {
+      margin: calculateRem(16px) 0;
+      width: 48%;
+
+      &:first-child {
+        margin-top: calculateRem(16px);
+      }
+    }
+  }
+}
