@@ -18,7 +18,7 @@ footer {
   }
 }
 
-@media screen and (min-width: 768px) {
+@include screen-md {
   footer {
     .page-footer {
       align-items: center;

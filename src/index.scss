@@ -81,10 +81,10 @@ img {
 }
 
 .icon {
-  @include icon(24px);
+  @include icon(18px);
 }
 
-@media screen and (min-width: 768px) {
+@include screen-md {
   h1 {
     @include font-size(48px);
   }

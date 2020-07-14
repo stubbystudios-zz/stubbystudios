@@ -33,7 +33,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@include screen-md {
   .portfolio {
     ul {
       display: flex;

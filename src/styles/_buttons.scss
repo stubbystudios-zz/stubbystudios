@@ -37,7 +37,7 @@
   justify-content: space-around;
 }
 
-@media screen and (min-width: 768px) {
+@include screen-md {
   .article {
     .btn {
       padding: calculateRem(12px) calculateRem(24px);
