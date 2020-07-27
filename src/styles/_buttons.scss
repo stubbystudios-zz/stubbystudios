@@ -26,10 +26,18 @@
 
 .indeed-btn {
   @include button($stubby-white, $indeed-blue);
+
+  &:visited {
+    color: $indeed-blue;
+  }
 }
 
 .linkedin-btn {
   @include button($stubby-white, $linkedin-blue);
+
+  &:visited {
+    color: $linkedin-blue;
+  }
 }
 
 .btn-container {
