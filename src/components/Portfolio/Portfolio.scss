@@ -3,6 +3,7 @@
 .modal-outer {
   height: 100%;
   left: 0;
+  padding: 0 calculateRem(16px);
   position: fixed;
   top: 0;
   width: 100vw;
@@ -22,11 +23,12 @@
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.9);
   color: $stubby-black-90;
   font-family: "Fauna One", Helvetica, Arial, sans-serif;
+  max-height: 90vh;
   margin: 5% auto 0;
   max-width: calculateRem(1200px);
+  overflow: hidden;
   padding: calculateRem(4px);
   position: relative;
-  width: 96%;
   z-index: 1020;
 
   header {
@@ -42,7 +44,9 @@
 
   img {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.55);
-    width: 100%;
+    display: block;
+    margin: 0 auto;
+    max-height: 75vh;
   }
 
   .icon-close {
