@@ -67,8 +67,7 @@ class Portfolio extends React.Component {
   }
 
   render() {
-    const portfolio = this.state.images;
-    console.log('PORTFOLIO', portfolio)
+    // const portfolio = this.state.images;
 
     return (
       <section className='portfolio'>
