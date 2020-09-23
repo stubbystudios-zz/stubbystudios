@@ -2,15 +2,14 @@
 
 .skills {
   ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: calculateRem(16px);
   }
 
   li {
     margin-bottom: calculateRem(48px);
     text-align: center;
-    width: 30%;
   }
 
   img {
@@ -24,15 +23,9 @@
   }
 }
 
-@include screen-md {
+@include breakpoint() {
   .skills {
-    ul {
-      justify-content: space-between;
-    }
-
     li {
-      width: 24%;
-
       img {
         height: calculateRem(110px);
       }

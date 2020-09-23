@@ -84,7 +84,7 @@ img {
   @include icon(18px);
 }
 
-@include screen-md {
+@include breakpoint() {
   h1 {
     @include font-size(48px);
   }

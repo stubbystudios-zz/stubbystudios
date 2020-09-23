@@ -2,7 +2,8 @@
 
 .portfolio {
   .screenshot {
-    margin: calculateRem(32px) auto;
+    margin-bottom: calculateRem(32px);
+    margin-top: calculateRem(32px);
 
     h3 {
       margin-bottom: calculateRem(8px);
@@ -15,10 +16,6 @@
     img {
       border: 3px solid $stubby-white-10;
       width: 100%;
-    }
-
-    &:first-child {
-      margin-top: 0;
     }
   }
 }
@@ -33,21 +30,17 @@
   }
 }
 
-@include screen-md {
+@include breakpoint() {
   .portfolio {
     ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-gap: calculateRem(16px);
     }
 
     .screenshot {
-      margin: calculateRem(16px) 0;
-      width: 48%;
-
-      &:first-child {
-        margin-top: calculateRem(16px);
-      }
+      margin-bottom: 0;
+      margin-top: 0;
     }
   }
 }

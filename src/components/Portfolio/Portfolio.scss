@@ -57,7 +57,7 @@
   }
 }
 
-@include screen-md {
+@include breakpoint() {
   .modal-inner {
     margin: calculateRem(24px) auto 0;
     padding: calculateRem(16px);

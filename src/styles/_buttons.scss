@@ -45,7 +45,7 @@
   justify-content: space-around;
 }
 
-@include screen-md {
+@include breakpoint() {
   .article {
     .btn {
       padding: calculateRem(12px) calculateRem(24px);

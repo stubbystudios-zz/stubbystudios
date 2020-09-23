@@ -1,3 +1,5 @@
+@import "./variables";
+
 @function calculateRem($size) {
   $rem-size: $size / 16px;
   @return #{$rem-size}rem;
@@ -15,26 +17,8 @@
   width: $size;
 }
 
-@mixin screen-xs {
-  @media screen and (min-width: #{$xs}) {
-    @content;
-  }
-}
-
-@mixin screen-sm {
-  @media screen and (min-width: #{$sm}) {
-    @content;
-  }
-}
-
-@mixin screen-md {
-  @media screen and (min-width: #{$md}) {
-    @content;
-  }
-}
-
-@mixin screen-lg {
-  @media screen and (min-width: #{$lg}) {
+@mixin breakpoint($width: $md) {
+  @media screen and (min-width: $width) {
     @content;
   }
 }

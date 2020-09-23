@@ -1,5 +1,6 @@
-// jest-dom adds custom jest matchers for asserting on DOM nodes.
-// allows you to do things like:
-// expect(element).toHaveTextContent(/react/i)
-// learn more: https://github.com/testing-library/jest-dom
-import '@testing-library/jest-dom/extend-expect';
+// Remove data-tests in production
+export const testAttr = val => {
+  return process.env.NODE_ENV === 'production'
+    ? {}
+    : { 'data-test': val };
+};
