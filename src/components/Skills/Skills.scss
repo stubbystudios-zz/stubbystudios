@@ -4,18 +4,18 @@
   ul {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    grid-gap: calculateRem(16px);
+    grid-gap: calcRem(16px);
   }
 
   li {
-    margin-bottom: calculateRem(48px);
+    margin-bottom: calcRem(48px);
     text-align: center;
   }
 
   img {
     display: block;
     margin: 0 auto;
-    height: calculateRem(90px);
+    height: calcRem(90px);
   }
 
   h4 {
@@ -27,7 +27,7 @@
   .skills {
     li {
       img {
-        height: calculateRem(110px);
+        height: calcRem(110px);
       }
     }
   }

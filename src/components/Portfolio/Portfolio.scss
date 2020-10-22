@@ -6,6 +6,7 @@
   position: fixed;
   top: 0;
   width: 100vw;
+  z-index: 100;
 
   .overlay {
     background: rgba(0, 0, 0, 0.75);
@@ -24,9 +25,9 @@
   font-family: "Fauna One", Helvetica, Arial, sans-serif;
   max-height: 90vh;
   margin: 5% auto 0;
-  max-width: calculateRem(900px);
+  max-width: calcRem(900px);
   overflow: hidden;
-  padding: calculateRem(4px);
+  padding: calcRem(4px);
   position: relative;
   z-index: 1020;
 
@@ -36,7 +37,7 @@
   }
 
   h3 {
-    margin-bottom: calculateRem(8px);
+    margin-bottom: calcRem(8px);
 
     @include font-size(18px);
   }
@@ -59,11 +60,11 @@
 
 @include breakpoint() {
   .modal-inner {
-    margin: calculateRem(24px) auto 0;
-    padding: calculateRem(16px);
+    margin: calcRem(24px) auto 0;
+    padding: calcRem(16px);
 
     h3 {
-      margin-bottom: calculateRem(16px);
+      margin-bottom: calcRem(16px);
 
       @include font-size(22px);
     }

@@ -15,7 +15,7 @@
 
 @keyframes hero-animations {
   0% {
-    margin-top: -(calculateRem(150px));
-    margin-bottom: calculateRem(174px);
+    margin-top: -(calcRem(150px));
+    margin-bottom: calcRem(174px);
   }
 }

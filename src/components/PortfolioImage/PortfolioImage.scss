@@ -2,31 +2,50 @@
 
 .portfolio {
   .screenshot {
-    margin-bottom: calculateRem(32px);
-    margin-top: calculateRem(32px);
+    margin-bottom: calcRem(32px);
+    margin-top: calcRem(32px);
 
     h3 {
-      margin-bottom: calculateRem(8px);
+      margin-bottom: calcRem(8px);
     }
 
     p {
-      margin-bottom: calculateRem(16px);
-    }
-
-    img {
-      border: 3px solid $stubby-white-10;
-      width: 100%;
+      margin-bottom: calcRem(16px);
     }
   }
 }
 
 .thumbnail-content {
-  img {
-    cursor: pointer;
+  .thumbnail-wrapper {
+    position: relative;
+    z-index: 10;
+
+    &:after {
+      background: transparent;
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+    }
 
     &:hover {
-      border-color: $stubby-blue;
+      margin: calcRem(-5px) calcRem(-5px) calcRem(-1px);
+      transition: 0.3s ease-in-out;
+
+      img {
+        border-color: $stubby-blue;
+        transition: 0.8s ease-in-out;
+      }
     }
+  }
+
+  img {
+    border: 3px solid $stubby-white-10;
+    cursor: pointer;
+    width: 100%;
   }
 }
 
@@ -35,12 +54,20 @@
     ul {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      grid-gap: calculateRem(16px);
+      grid-gap: calcRem(16px);
     }
 
     .screenshot {
       margin-bottom: 0;
       margin-top: 0;
+    }
+  }
+
+  .thumbnail-content {
+    .thumbnail-wrapper {
+      &:after {
+        display: none;
+      }
     }
   }
 }

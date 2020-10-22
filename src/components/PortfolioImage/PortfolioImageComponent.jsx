@@ -10,15 +10,17 @@ const PortfolioImage = (props) => {
   return portfolio.map((screenshot, index) =>
     <li className='screenshot' key={index}>
       <div className='thumbnail-content'>
-        {isMediumScreen
-          ? <img
-            src={screenshot.thumbnail}
-            alt={screenshot.thumbnail_alt}
-            onClick={() => props.handleClick(screenshot)}
-          />
-          : <img
-            src={screenshot.thumbnail}
-            alt={screenshot.thumbnail_alt} />}
+        <div className='thumbnail-wrapper'>
+          {isMediumScreen
+            ? <img
+              src={screenshot.thumbnail}
+              alt={screenshot.thumbnail_alt}
+              onClick={() => props.handleClick(screenshot)}
+            />
+            : <img
+              src={screenshot.thumbnail}
+              alt={screenshot.thumbnail_alt} />}
+        </div>
         <h3>{screenshot.title}</h3>
         <p>{screenshot.text}</p>
       </div>

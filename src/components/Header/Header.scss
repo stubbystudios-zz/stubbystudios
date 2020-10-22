@@ -4,7 +4,7 @@
 .header-main {
   align-items: center;
   background-color: $stubby-white-10;
-  background-position: -(calculateRem(20px)) bottom;
+  background-position: -(calcRem(20px)) bottom;
   background-repeat: no-repeat;
   background-size: cover;
   border-bottom: 20px solid $stubby-purple-30;
@@ -12,8 +12,8 @@
   color: $stubby-white;
   display: flex;
   flex-direction: column;
-  margin-bottom: calculateRem(48px);
-  padding: calculateRem(24px) 0 calculateRem(160px);
+  margin-bottom: calcRem(48px);
+  padding: calcRem(24px) 0 calcRem(160px);
   text-align: center;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.35);
 
@@ -22,7 +22,7 @@
   }
 
   img {
-    max-width: calculateRem(75px);
+    max-width: calcRem(75px);
   }
 }
 
@@ -30,8 +30,8 @@
   .header-main {
     background-position: center bottom;
     background-size: cover;
-    height: calculateRem(475px);
-    padding: calculateRem(48px) 0;
+    height: calcRem(475px);
+    padding: calcRem(48px) 0;
 
     h1 {
       @include font-size(48px);

@@ -7,8 +7,8 @@
   cursor: pointer;
   display: inline-block;
   font-weight: bold;
-  margin: calculateRem(24px) 0;
-  padding: calculateRem(8px) calculateRem(12px);
+  margin: calcRem(24px) 0;
+  padding: calcRem(8px) calcRem(12px);
 
   @include font-size(14px);
 
@@ -48,7 +48,7 @@
 @include breakpoint() {
   .article {
     .btn {
-      padding: calculateRem(12px) calculateRem(24px);
+      padding: calcRem(12px) calcRem(24px);
 
       @include font-size(16px);
     }
@@ -58,7 +58,7 @@
     }
 
     .linkedin-btn {
-      margin-right: calculateRem(16px);
+      margin-right: calcRem(16px);
     }
   }
 }
