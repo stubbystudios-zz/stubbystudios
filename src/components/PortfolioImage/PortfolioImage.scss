@@ -32,12 +32,12 @@
     }
 
     &:hover {
-      margin: calcRem(-5px) calcRem(-5px) calcRem(-1px);
-      transition: 0.3s ease-in-out;
+      margin: 0;
+      transition: none;
 
       img {
         border-color: $stubby-blue;
-        transition: 0.8s ease-in-out;
+        transition: none;
       }
     }
   }
@@ -67,6 +67,15 @@
     .thumbnail-wrapper {
       &:after {
         display: none;
+      }
+
+      &:hover {
+        margin: calcRem(-5px) calcRem(-5px) calcRem(-1px);
+        transition: 0.3s ease-in-out;
+
+        img {
+          transition: 0.8s ease-in-out;
+        }
       }
     }
   }
