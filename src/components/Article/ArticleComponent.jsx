@@ -9,9 +9,11 @@ const Article = ({ article }) => {
         <p>{article.body}</p>
         <div className='btn-container'>
           <a href='https://www.linkedin.com/in/careybest/' className='btn linkedin-btn'>
-            Connect on LinkedIn</a>
+            <span>Connect on LinkedIn</span>
+          </a>
           <a href='https://my.indeed.com/p/careyb-n8x5j7o' className='btn indeed-btn'>
-            Indeed Resume</a>
+            <span>Indeed Resume</span>
+          </a>
         </div>
       </div>
     </section>

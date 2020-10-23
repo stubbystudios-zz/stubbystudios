@@ -9,15 +9,35 @@
   font-weight: bold;
   margin: calcRem(24px) 0;
   padding: calcRem(8px) calcRem(12px);
-  transition: 0.3s ease-in-out;
+  position: relative;
+
+  span {
+    position: relative;
+    z-index: 10;
+  }
 
   @include font-size(14px);
 
-  &:hover {
+  &:after {
     background: $btn-color-2;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.3s ease-in-out;
+    width: 0;
+  }
+
+  &:hover {
+    background: lighten($btn-color-2, 10%);
     box-shadow: 0 0 1px 1px $btn-color-1;
     border: 2px solid $btn-color-2;
     color: $btn-color-1;
+
+    &:after {
+      height: 100%;
+      width: 100%;
+    }
   }
 }
 
