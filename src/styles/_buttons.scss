@@ -9,6 +9,7 @@
   font-weight: bold;
   margin: calcRem(24px) 0;
   padding: calcRem(8px) calcRem(12px);
+  transition: 0.3s ease-in-out;
 
   @include font-size(14px);
 
